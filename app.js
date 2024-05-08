@@ -10,6 +10,7 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var kelasRouter = require("./routes/kelas");
 var sessionRouter = require("./routes/session");
+var productsRouter = require("./routes/product");
 // deklarasi lokasi untuk auth
 const loginRoutes = require("./routes/login");
 const registerRoutes = require("./routes/register");
@@ -51,5 +52,7 @@ app.use("/session", sessionRouter);
 // Gunakan routes yang telah didefinisikan untuk auth
 app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
+//gunakan routes yang telah dideklarasikan untuk product
+app.use("/product", productsRouter);
 
 module.exports = app;
